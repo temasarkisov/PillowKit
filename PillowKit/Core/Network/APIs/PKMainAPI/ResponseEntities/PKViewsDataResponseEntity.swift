@@ -1,6 +1,6 @@
 import Foundation
 
 public struct PKViewsDataResponseEntity: Codable {
-    public let viewsRules: [PKViewRulesResponseEntity]?
+    public let viewsRules: [PKViewRulesResponseEntity]
 }
 

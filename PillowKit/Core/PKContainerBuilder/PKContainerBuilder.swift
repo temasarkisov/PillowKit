@@ -1,27 +1,20 @@
 import UIKit
 
-private let logger: Logger = Logger()
-
-final class PKViewContainerBuilder {
+final class PKContainerBuilder {
     private let provider: PKProvider = PKProvider(
         API: DefaultPKMainAPI(
             networkService: DefaultHTTPNetworkService()
         )
     )
-    private let viewsBuilder: PKViewsBuilder = PKViewsBuilder()
     
-//    init(
-//        provider: PKProvider,
-//        viewsFactory: PKViewsFactory
-//    ) {
-//        self.provider = provider
-//        self.viewsFactory = viewsFactory
-//    }
+    private let viewBuilder: PKViewBuilder = PKViewBuilder()
+    
+    private var container: PKContainer = PKContainer()
 }
 
-extension PKViewContainerBuilder {
+extension PKContainerBuilder {
     func build(
-        completion: @escaping(Result<UIView, Error>) -> Void
+        completion: @escaping(Result<PKContainer, Error>) -> Void
     ) {
         provider.fetchViewsData(
             completion: { [weak self] result in
@@ -29,15 +22,29 @@ extension PKViewContainerBuilder {
                 
                 switch result {
                 case .success(let viewsData):
-                    
+                    this.compose(viewsData: viewsData)
+                    completion(.success(this.container))
                 case .failure(let error):
-                    logger.log("Error: \(error)")
+                    completion(.failure(error))
                 }
             }
         )
     }
     
-    func build(viewRules: PKViewRules) -> UIView {
-        
+    private func compose(viewsData: PKViewsData) {
+        viewsData.viewsRules.forEach { viewRules in
+            addView(viewRules: viewRules)
+        }
+    }
+    
+    private func addView(viewRules: PKViewRules) {
+        let view = viewBuilder.build(viewRules: viewRules)
+        container.addSubview(view)
+        NSLayoutConstraint.activate([
+            view.leadingAnchor.constraint(equalTo: container.leadingAnchor),
+            view.trailingAnchor.constraint(equalTo: container.trailingAnchor),
+            view.topAnchor.constraint(equalTo: container.topAnchor),
+            view.bottomAnchor.constraint(equalTo: container.bottomAnchor),
+        ])
     }
 }

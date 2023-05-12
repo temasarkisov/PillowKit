@@ -14,24 +14,13 @@ extension PKViewBuilder {
     private func build(viewType: PKViewRules.ViewType) -> UIView {
         switch viewType {
         case .view:
-            return UIView()
+            return PKView()
         case .imageView:
-            return UIImageView()
+            return PKImageView()
         case .textField:
-            return UITextField()
+            return PKTextField()
         case .unknown:
-            return UIView()
+            return PKView()
         }
-    }
-}
-
-extension UIView {
-    fileprivate func apply(
-        visualProperties: [PKViewRules.VisualPropertyKey: String]
-    ) {
-        guard let color = visualProperties[.backgroundColor] else {
-            backgroundColor = .systemYellow
-        }
-        backgroundColor = UIColor(hex: color)
     }
 }

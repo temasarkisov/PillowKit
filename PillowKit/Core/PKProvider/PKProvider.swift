@@ -8,13 +8,13 @@ final class PKProvider {
     }
     
     func fetchViewsData(
-        completion: @escaping (Result<PKViewsDataResponseEntity, Error>) -> Void
+        completion: @escaping (Result<PKViewsData, Error>) -> Void
     ) {
         API.viewsData(
             completion: { result in
                 switch result {
-                case .success(let responseEntity):
-                    completion(.success(responseEntity))
+                case .success(let viewsDataResponseEntity):
+                    completion(.success(PKViewsData(viewsDataResponseEntity)))
                 case .failure(let error):
                     completion(.failure(error))
                 }

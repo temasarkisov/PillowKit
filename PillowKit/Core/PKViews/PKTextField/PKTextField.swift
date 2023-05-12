@@ -1,8 +1,3 @@
-//
-//  PKTextField.swift
-//  PillowKit
-//
-//  Created by Артем Саркисов on 12.05.2023.
-//
+import UIKit
 
-import Foundation
+final class PKTextField: UITextField {}

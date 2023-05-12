@@ -2,40 +2,62 @@ import UIKit
 
 struct PKViewRules {
     let id: String
-    let name: Name
-    let layout: [String: String]
-    let visualProperties: [VisualPropertyName: String]
+    let viewType: ViewType
+    let layoutConfig: [LayoutConfigKey: String]
+    let visualProperties: [VisualPropertyKey: String]
     let visualEffects: [String: String]?
-    
-    init(responseEntity: PKViewRulesResponseEntity) {
-        id = responseEntity.id
-        name = Name(rawValue: responseEntity.name) ?? .unknown
-        layout = responseEntity.layout
-        visualProperties = VisualPropertyName.serialize(
-            responseEntity.visualProperties
+}
+
+extension PKViewRules {
+    init(_ viewRulesResponseEntity: PKViewRulesResponseEntity) {
+        id = viewRulesResponseEntity.id
+        viewType = ViewType(rawValue: viewRulesResponseEntity.viewType) ?? .unknown
+        layoutConfig = LayoutConfigKey.serialize(
+            viewRulesResponseEntity.layoutConfig
+        )
+        visualProperties = VisualPropertyKey.serialize(
+            viewRulesResponseEntity.visualProperties
         )
         visualEffects = nil
     }
 }
 
 extension PKViewRules {
-    enum Name: String {
-        case view = "PKView"
-        case textField = "PKTextField"
-        case imageView = "PKImageView"
+    enum ViewType: String {
+        case view = "UIView"
+        case textField = "UITextField"
+        case imageView = "UIImageView"
         case unknown
     }
     
-    enum VisualPropertyName: String {
+    enum LayoutConfigKey: String {
+        case left = "left"
+        case top = "top"
+        case right = "right"
+        case bottom = "bottom"
+        case centerX = "centerX"
+        case centerY = "centerY"
+        case unknown
+        
+        fileprivate static func serialize(
+            _ layoutConfig: [String: String]
+        ) -> [LayoutConfigKey: String] {
+            layoutConfig.reduce(into: [:]) { partialResult, layoutConfigItem in
+                partialResult[LayoutConfigKey(rawValue: layoutConfigItem.key) ?? .unknown] = layoutConfigItem.value
+            }
+        }
+    }
+    
+    enum VisualPropertyKey: String {
         case backgroundColor = "backgorund_color"
         case cornerRadius = "corner_radius"
         case unknown
         
         fileprivate static func serialize(
             _ visualProperties: [String: String]
-        ) -> [VisualPropertyName: String] {
+        ) -> [VisualPropertyKey: String] {
             visualProperties.reduce(into: [:]) { partialResult, visualProperty in
-                partialResult[VisualPropertyName(rawValue: visualProperty.key) ?? .unknown] = visualProperty.value
+                partialResult[VisualPropertyKey(rawValue: visualProperty.key) ?? .unknown] = visualProperty.value
             }
         }
     }

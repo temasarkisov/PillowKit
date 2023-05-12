@@ -1,8 +1,12 @@
-//
-//  UIViewExtensions.swift
-//  PillowKit
-//
-//  Created by Артем Саркисов on 12.05.2023.
-//
+import UIKit
 
-import Foundation
+extension UIView {
+    func apply(
+        visualProperties: [PKViewRules.VisualPropertyKey: String]
+    ) {
+        if let color = visualProperties[.backgroundColor] {
+            backgroundColor = UIColor(hex: color)
+        }
+
+    }
+}

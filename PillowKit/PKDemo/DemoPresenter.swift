@@ -7,7 +7,7 @@ protocol DemoPresenterDelegate: AnyObject {
 }
 
 final class DemoPresenter {
-    weak var view: DemoPresenterDelegate?
+    private let view: DemoPresenterDelegate
     private let containerBuilder: PKContainerBuilder
     
     init(
@@ -20,14 +20,14 @@ final class DemoPresenter {
 }
 
 extension DemoPresenter: DemoViewDelegate {
-    func didLoad(view: DemoViewController) {
+    func didLoad() {
         containerBuilder.build(
             completion: { [weak self] result in
                 guard let this = self else { return }
                 
                 switch result {
                 case .success(let container):
-                    view.updateContainer(container)
+                    this.view.updateContainer(container)
                 case .failure(let error):
                     logger.log("Error: \(error)")
                 }

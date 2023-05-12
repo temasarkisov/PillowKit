@@ -1,18 +1,21 @@
 import UIKit
 
 protocol DemoViewDelegate: AnyObject {
-    func didLoad(view: DemoViewController)
+    func didLoad()
 }
 
 class DemoViewController: UIViewController {
-    private lazy var delegate: DemoViewDelegate = DemoPresenter()
+    private lazy var delegate: DemoViewDelegate = DemoPresenter(
+        view: self,
+        containerBuilder: PKContainerBuilder()
+    )
     
-    private var container: Container?
+    private var container: PKContainer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        delegate.didLoad(view: self)
+        delegate.didLoad()
     }
 }
 
