@@ -4,6 +4,7 @@ final class PKViewBuilder {
     func build(viewRules: PKViewRules) -> UIView {
         let view = build(viewType: viewRules.viewType)
         
+        print(viewRules.visualProperties)
         view.apply(visualProperties: viewRules.visualProperties)
         
         return view

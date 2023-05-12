@@ -29,6 +29,7 @@ extension DemoViewController: DemoPresenterDelegate {
         print(#function, container.subviews)
         
         view.addSubview(container)
+        
         NSLayoutConstraint.activate([
             container.leadingAnchor.constraint(
                 equalTo: view.leadingAnchor

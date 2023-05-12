@@ -182,7 +182,6 @@
 				6E5B90592A0A9AEC002D7DB3 /* APIs */,
 				6E5B90642A0A9EFD002D7DB3 /* Endpoints */,
 				6E5B90672A0A9FC7002D7DB3 /* Secrets */,
-				6E5B908E2A0E4F06002D7DB3 /* Utils */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -325,6 +324,7 @@
 				6E5B90882A0C1143002D7DB3 /* PKProvider */,
 				6E5B90752A0BE027002D7DB3 /* Models */,
 				6E5B90482A0A95E2002D7DB3 /* Network */,
+				6E5B908E2A0E4F06002D7DB3 /* Utils */,
 			);
 			path = Core;
 			sourceTree = "<group>";

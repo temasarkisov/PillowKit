@@ -6,7 +6,8 @@ extension UIView {
     ) {
         if let color = visualProperties[.backgroundColor] {
             backgroundColor = UIColor(hex: color)
+        } else {
+            backgroundColor = .systemYellow
         }
-
     }
 }

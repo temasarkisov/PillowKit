@@ -49,7 +49,7 @@ extension PKViewRules {
     }
     
     enum VisualPropertyKey: String {
-        case backgroundColor = "backgorund_color"
+        case backgroundColor = "background_color"
         case cornerRadius = "corner_radius"
         case unknown
         

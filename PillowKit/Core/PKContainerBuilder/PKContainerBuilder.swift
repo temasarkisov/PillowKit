@@ -39,12 +39,15 @@ extension PKContainerBuilder {
     
     private func addView(viewRules: PKViewRules) {
         let view = viewBuilder.build(viewRules: viewRules)
+        view.translatesAutoresizingMaskIntoConstraints = false
         container.addSubview(view)
-        NSLayoutConstraint.activate([
-            view.leadingAnchor.constraint(equalTo: container.leadingAnchor),
-            view.trailingAnchor.constraint(equalTo: container.trailingAnchor),
-            view.topAnchor.constraint(equalTo: container.topAnchor),
-            view.bottomAnchor.constraint(equalTo: container.bottomAnchor),
-        ])
+        container.addViewsConstraints(
+            [
+                view.leadingAnchor.constraint(equalTo: container.leadingAnchor),
+                view.trailingAnchor.constraint(equalTo: container.trailingAnchor),
+                view.topAnchor.constraint(equalTo: container.topAnchor),
+                view.bottomAnchor.constraint(equalTo: container.bottomAnchor),
+            ]
+        )
     }
 }
