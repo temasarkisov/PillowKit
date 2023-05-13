@@ -38,7 +38,11 @@ extension PKContainerBuilder {
     }
     
     private func addView(viewRules: PKViewRules) {
-        let view = viewBuilder.build(viewRules: viewRules)
+        guard let view = viewBuilder.build(viewRules: viewRules) else {
+            print("failed")
+            return
+        }
+//        viewWrapper = PKViewWrapper(view: view, id: viewRules.id)
         view.translatesAutoresizingMaskIntoConstraints = false
         container.addSubview(view)
         container.addViewsConstraints(

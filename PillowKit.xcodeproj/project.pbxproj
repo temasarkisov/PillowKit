@@ -36,12 +36,16 @@
 		6E5B908D2A0C1411002D7DB3 /* PKViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B908C2A0C1411002D7DB3 /* PKViewBuilder.swift */; };
 		6E5B90912A0E4F31002D7DB3 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B90902A0E4F31002D7DB3 /* UIColorExtensions.swift */; };
 		6E5B909B2A0E5427002D7DB3 /* PKContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B909A2A0E5427002D7DB3 /* PKContainer.swift */; };
-		6E5B909D2A0E5456002D7DB3 /* PKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B909C2A0E5456002D7DB3 /* PKView.swift */; };
+		6E5B909D2A0E5456002D7DB3 /* PKLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B909C2A0E5456002D7DB3 /* PKLabel.swift */; };
 		6E5B90A02A0E54E1002D7DB3 /* PKImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B909F2A0E54E1002D7DB3 /* PKImageView.swift */; };
 		6E5B90A22A0E551B002D7DB3 /* PKTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B90A12A0E551B002D7DB3 /* PKTextField.swift */; };
 		6E5B90A42A0E5543002D7DB3 /* PKButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B90A32A0E5543002D7DB3 /* PKButton.swift */; };
-		6E5B90A72A0E566A002D7DB3 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B90A62A0E566A002D7DB3 /* UIViewExtensions.swift */; };
 		6E5B90A92A0E936D002D7DB3 /* DemoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B90A82A0E936D002D7DB3 /* DemoCoordinator.swift */; };
+		6E5B90B02A0FDEF0002D7DB3 /* PKViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B90AF2A0FDEF0002D7DB3 /* PKViewProtocol.swift */; };
+		6E5B90B32A0FE57E002D7DB3 /* UIFontsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B90B22A0FE57E002D7DB3 /* UIFontsExtensions.swift */; };
+		6E5B90B52A0FE640002D7DB3 /* ALSSirius.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E5B90B42A0FE640002D7DB3 /* ALSSirius.ttf */; };
+		6E5B90B72A0FF769002D7DB3 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B90B62A0FF769002D7DB3 /* UIImageViewExtension.swift */; };
+		6E5B90B92A100765002D7DB3 /* PKTextFieldWithPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B90B82A100765002D7DB3 /* PKTextFieldWithPadding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,12 +99,16 @@
 		6E5B908C2A0C1411002D7DB3 /* PKViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKViewBuilder.swift; sourceTree = "<group>"; };
 		6E5B90902A0E4F31002D7DB3 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		6E5B909A2A0E5427002D7DB3 /* PKContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKContainer.swift; sourceTree = "<group>"; };
-		6E5B909C2A0E5456002D7DB3 /* PKView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKView.swift; sourceTree = "<group>"; };
+		6E5B909C2A0E5456002D7DB3 /* PKLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKLabel.swift; sourceTree = "<group>"; };
 		6E5B909F2A0E54E1002D7DB3 /* PKImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKImageView.swift; sourceTree = "<group>"; };
 		6E5B90A12A0E551B002D7DB3 /* PKTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKTextField.swift; sourceTree = "<group>"; };
 		6E5B90A32A0E5543002D7DB3 /* PKButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKButton.swift; sourceTree = "<group>"; };
-		6E5B90A62A0E566A002D7DB3 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		6E5B90A82A0E936D002D7DB3 /* DemoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoCoordinator.swift; sourceTree = "<group>"; };
+		6E5B90AF2A0FDEF0002D7DB3 /* PKViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKViewProtocol.swift; sourceTree = "<group>"; };
+		6E5B90B22A0FE57E002D7DB3 /* UIFontsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontsExtensions.swift; sourceTree = "<group>"; };
+		6E5B90B42A0FE640002D7DB3 /* ALSSirius.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ALSSirius.ttf; sourceTree = "<group>"; };
+		6E5B90B62A0FF769002D7DB3 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		6E5B90B82A100765002D7DB3 /* PKTextFieldWithPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKTextFieldWithPadding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,13 +289,13 @@
 			path = PKDemo;
 			sourceTree = "<group>";
 		};
-		6E5B90752A0BE027002D7DB3 /* Models */ = {
+		6E5B90752A0BE027002D7DB3 /* PKModels */ = {
 			isa = PBXGroup;
 			children = (
 				6E5B907A2A0BFF83002D7DB3 /* PKViewRules */,
 				6E5B907F2A0BFFDB002D7DB3 /* PKViewsData */,
 			);
-			path = Models;
+			path = PKModels;
 			sourceTree = "<group>";
 		};
 		6E5B907A2A0BFF83002D7DB3 /* PKViewRules */ = {
@@ -317,12 +325,13 @@
 		6E5B90852A0C107F002D7DB3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				6E5B90922A0E52E0002D7DB3 /* PKViews */,
-				6E5B90992A0E53E8002D7DB3 /* PKContainer */,
+				6E5B90922A0E52E0002D7DB3 /* PKView */,
+				6E5B90BA2A1014C2002D7DB3 /* PKViewWrapper */,
 				6E5B908B2A0C13B1002D7DB3 /* PKViewBuilder */,
+				6E5B90992A0E53E8002D7DB3 /* PKContainer */,
 				6E5B90842A0C106B002D7DB3 /* PKContainerBuilder */,
 				6E5B90882A0C1143002D7DB3 /* PKProvider */,
-				6E5B90752A0BE027002D7DB3 /* Models */,
+				6E5B90752A0BE027002D7DB3 /* PKModels */,
 				6E5B90482A0A95E2002D7DB3 /* Network */,
 				6E5B908E2A0E4F06002D7DB3 /* Utils */,
 			);
@@ -348,9 +357,10 @@
 		6E5B908E2A0E4F06002D7DB3 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				6E5B90A52A0E5654002D7DB3 /* UIView */,
+				6E5B90B12A0FE570002D7DB3 /* Fonts */,
 				6E5B908F2A0E4F21002D7DB3 /* Colors */,
 				6E5B906A2A0AA103002D7DB3 /* Logger */,
+				6E5B90B62A0FF769002D7DB3 /* UIImageViewExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -363,23 +373,24 @@
 			path = Colors;
 			sourceTree = "<group>";
 		};
-		6E5B90922A0E52E0002D7DB3 /* PKViews */ = {
+		6E5B90922A0E52E0002D7DB3 /* PKView */ = {
 			isa = PBXGroup;
 			children = (
-				6E5B90932A0E5304002D7DB3 /* PKView */,
+				6E5B90932A0E5304002D7DB3 /* PKLabel */,
 				6E5B90952A0E539C002D7DB3 /* PKImageView */,
 				6E5B90982A0E53BB002D7DB3 /* PKTextField */,
 				6E5B909E2A0E54B8002D7DB3 /* PKButton */,
-			);
-			path = PKViews;
-			sourceTree = "<group>";
-		};
-		6E5B90932A0E5304002D7DB3 /* PKView */ = {
-			isa = PBXGroup;
-			children = (
-				6E5B909C2A0E5456002D7DB3 /* PKView.swift */,
+				6E5B90AF2A0FDEF0002D7DB3 /* PKViewProtocol.swift */,
 			);
 			path = PKView;
+			sourceTree = "<group>";
+		};
+		6E5B90932A0E5304002D7DB3 /* PKLabel */ = {
+			isa = PBXGroup;
+			children = (
+				6E5B909C2A0E5456002D7DB3 /* PKLabel.swift */,
+			);
+			path = PKLabel;
 			sourceTree = "<group>";
 		};
 		6E5B90952A0E539C002D7DB3 /* PKImageView */ = {
@@ -394,6 +405,7 @@
 			isa = PBXGroup;
 			children = (
 				6E5B90A12A0E551B002D7DB3 /* PKTextField.swift */,
+				6E5B90B82A100765002D7DB3 /* PKTextFieldWithPadding.swift */,
 			);
 			path = PKTextField;
 			sourceTree = "<group>";
@@ -414,19 +426,27 @@
 			path = PKButton;
 			sourceTree = "<group>";
 		};
-		6E5B90A52A0E5654002D7DB3 /* UIView */ = {
-			isa = PBXGroup;
-			children = (
-				6E5B90A62A0E566A002D7DB3 /* UIViewExtensions.swift */,
-			);
-			path = UIView;
-			sourceTree = "<group>";
-		};
 		6E5B90AA2A0E9559002D7DB3 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Demo;
+			sourceTree = "<group>";
+		};
+		6E5B90B12A0FE570002D7DB3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6E5B90B22A0FE57E002D7DB3 /* UIFontsExtensions.swift */,
+				6E5B90B42A0FE640002D7DB3 /* ALSSirius.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		6E5B90BA2A1014C2002D7DB3 /* PKViewWrapper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PKViewWrapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -533,6 +553,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E5B90B52A0FE640002D7DB3 /* ALSSirius.ttf in Resources */,
 				6E5B90232A0A952F002D7DB3 /* LaunchScreen.storyboard in Resources */,
 				6E5B90202A0A952F002D7DB3 /* Assets.xcassets in Resources */,
 			);
@@ -559,6 +580,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E5B90B92A100765002D7DB3 /* PKTextFieldWithPadding.swift in Sources */,
 				6E5B90562A0A9955002D7DB3 /* HTTPQueryParams.swift in Sources */,
 				6E5B907C2A0BFF9B002D7DB3 /* PKViewRules.swift in Sources */,
 				6E5B909B2A0E5427002D7DB3 /* PKContainer.swift in Sources */,
@@ -566,23 +588,25 @@
 				6E5B90872A0C109B002D7DB3 /* PKContainerBuilder.swift in Sources */,
 				6E5B904C2A0A9849002D7DB3 /* HTTPRequest.swift in Sources */,
 				6E5B90A92A0E936D002D7DB3 /* DemoCoordinator.swift in Sources */,
+				6E5B90B02A0FDEF0002D7DB3 /* PKViewProtocol.swift in Sources */,
 				6E5B90522A0A98E2002D7DB3 /* HTTPMethod.swift in Sources */,
 				6E5B90692A0A9FEA002D7DB3 /* PKSecret.swift in Sources */,
 				6E5B90602A0A9C90002D7DB3 /* ViewsRulesRequest.swift in Sources */,
 				6E5B90172A0A952D002D7DB3 /* AppDelegate.swift in Sources */,
 				6E5B908A2A0C1150002D7DB3 /* PKProvider.swift in Sources */,
 				6E5B90912A0E4F31002D7DB3 /* UIColorExtensions.swift in Sources */,
+				6E5B90B72A0FF769002D7DB3 /* UIImageViewExtension.swift in Sources */,
 				6E5B90A22A0E551B002D7DB3 /* PKTextField.swift in Sources */,
 				6E5B90632A0A9D51002D7DB3 /* PKViewRulesResponseEntity.swift in Sources */,
 				6E5B90832A0BFFFC002D7DB3 /* PKViewsData.swift in Sources */,
 				6E5B908D2A0C1411002D7DB3 /* PKViewBuilder.swift in Sources */,
-				6E5B909D2A0E5456002D7DB3 /* PKView.swift in Sources */,
+				6E5B909D2A0E5456002D7DB3 /* PKLabel.swift in Sources */,
 				6E5B90702A0BC110002D7DB3 /* DemoPresenter.swift in Sources */,
 				6E5B90192A0A952D002D7DB3 /* SceneDelegate.swift in Sources */,
 				6E5B905B2A0A9B0C002D7DB3 /* PKMainAPI.swift in Sources */,
+				6E5B90B32A0FE57E002D7DB3 /* UIFontsExtensions.swift in Sources */,
 				6E5B906C2A0AA126002D7DB3 /* Logger.swift in Sources */,
 				6E5B90502A0A98BD002D7DB3 /* HTTPError.swift in Sources */,
-				6E5B90A72A0E566A002D7DB3 /* UIViewExtensions.swift in Sources */,
 				6E5B90A02A0E54E1002D7DB3 /* PKImageView.swift in Sources */,
 				6E5B90542A0A9906002D7DB3 /* HTTPNetworkService.swift in Sources */,
 				6E5B90A42A0E5543002D7DB3 /* PKButton.swift in Sources */,

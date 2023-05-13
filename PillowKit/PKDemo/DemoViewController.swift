@@ -26,9 +26,9 @@ extension DemoViewController: DemoPresenterDelegate {
         
         container.translatesAutoresizingMaskIntoConstraints = false
         
-        print(#function, container.subviews)
-        
         view.addSubview(container)
+        
+        print(container.subviews)
         
         NSLayoutConstraint.activate([
             container.leadingAnchor.constraint(
