@@ -1,25 +1,24 @@
 import UIKit
 
-final class PKContainerBuilder {
+final class PKContainerBuilder: PKContainerBuilderProtocol {
     private let provider: PKProvider = PKProvider(
         API: DefaultPKMainAPI(
             networkService: DefaultHTTPNetworkService()
         )
     )
-    
-    private let viewBuilder: PKViewBuilder = PKViewBuilder()
-    
+    private let viewWrapperBuilder: PKViewWrapperBuilderProtocol = PKViewWrapperBuilder(
+        viewBuilder: PKViewBuilder()
+    )
     private var container: PKContainer = PKContainer()
 }
 
 extension PKContainerBuilder {
-    func build(
-        completion: @escaping(Result<PKContainer, Error>) -> Void
-    ) {
+    func build(completion: @escaping(Result<PKContainer, Error>) -> Void) {
         provider.fetchViewsData(
             completion: { [weak self] result in
-                guard let this = self else { return }
-                
+                guard let this = self else {
+                    return
+                }
                 switch result {
                 case .success(let viewsData):
                     this.compose(viewsData: viewsData)
@@ -30,28 +29,42 @@ extension PKContainerBuilder {
             }
         )
     }
+}
     
+extension PKContainerBuilder {
     private func compose(viewsData: PKViewsData) {
         viewsData.viewsRules.forEach { viewRules in
-            addView(viewRules: viewRules)
+            addViewWrapper(viewRules: viewRules)
         }
+        container.calculateConstraints()
     }
     
-    private func addView(viewRules: PKViewRules) {
-        guard let view = viewBuilder.build(viewRules: viewRules) else {
-            print("failed")
+    private func addViewWrapper(viewRules: PKViewRules) {
+        guard let viewWrapper = viewWrapperBuilder.build(
+            viewRules: viewRules
+        ) else {
             return
         }
-//        viewWrapper = PKViewWrapper(view: view, id: viewRules.id)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        container.addSubview(view)
-        container.addViewsConstraints(
-            [
-                view.leadingAnchor.constraint(equalTo: container.leadingAnchor),
-                view.trailingAnchor.constraint(equalTo: container.trailingAnchor),
-                view.topAnchor.constraint(equalTo: container.topAnchor),
-                view.bottomAnchor.constraint(equalTo: container.bottomAnchor),
-            ]
-        )
+        container.addViewWrapper(viewWrapper: viewWrapper)
     }
+    
+//    private func addView(viewRules: PKViewRules) {
+//        guard let viewWrapper = viewWrapperBuilder.build(
+//            viewRules: viewRules
+//        ) else {
+//            return
+//        }
+//
+//        viewWrapper.view.translatesAutoresizingMaskIntoConstraints = false
+//
+//        container.addSubview(viewWrapper.view)
+//        container.addViewsConstraints(
+//            [
+//                viewWrapper.view.leadingAnchor.constraint(equalTo: container.leadingAnchor),
+//                viewWrapper.view.trailingAnchor.constraint(equalTo: container.trailingAnchor),
+//                viewWrapper.view.topAnchor.constraint(equalTo: container.topAnchor),
+//                viewWrapper.view.bottomAnchor.constraint(equalTo: container.bottomAnchor),
+//            ]
+//        )
+//    }
 }

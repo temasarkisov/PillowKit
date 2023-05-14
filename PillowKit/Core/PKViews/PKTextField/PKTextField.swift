@@ -1,6 +1,6 @@
 import UIKit
 
-final class PKTextField: UIView {
+final class PKTextField: PKView {
     private let textField: UITextField = PKTextFieldWithPadding()
     
     init() {
@@ -32,7 +32,7 @@ extension PKTextField {
 }
 
 extension PKTextField: PKViewProtocol {
-    func apply(visualProperties: [PKViewRules.VisualPropertyKey : String]) {
+    func apply(visualProperties: [PKViewRules.VisualPropertyKey: String]) {
         textField.clipsToBounds = true
         
         textField.layer.cornerRadius = CGFloat(Double(visualProperties[.cornerRadius] ?? "") ?? 0.0)
@@ -45,19 +45,19 @@ extension PKTextField: PKViewProtocol {
             size: CGFloat(Double(visualProperties[.fontSize] ?? "") ?? 11.0)
         )
         textField.textColor = UIColor(hex: visualProperties[.textColor] ?? "#ffffffff")
-        textField.textAlignment = detectTextAlignment(textAlignment: visualProperties[.textAlignment] ?? "")
+        textField.textAlignment = determineTextAlignment(textAlignment: visualProperties[.textAlignment] ?? "")
         
-        textField.autocorrectionType = detectAutocorrectionType(
+        textField.autocorrectionType = determineAutocorrectionType(
             autocorrectionType: visualProperties[.autocorrectionType] ?? ""
         )
-        textField.autocapitalizationType = detectAutocapitalizationType(
+        textField.autocapitalizationType = determineAutocapitalizationType(
             autocapitalizationType: visualProperties[.autocapitalizationType] ?? ""
         )
     }
 }
 
 extension PKTextField {
-    private func detectTextAlignment(textAlignment: String) -> NSTextAlignment {
+    private func determineTextAlignment(textAlignment: String) -> NSTextAlignment {
         if textAlignment == "center" {
             return .center
         }
@@ -70,7 +70,7 @@ extension PKTextField {
         return .left
     }
     
-    private func detectAutocorrectionType(
+    private func determineAutocorrectionType(
         autocorrectionType: String
     ) -> UITextAutocorrectionType {
         if autocorrectionType == "true" {
@@ -85,7 +85,7 @@ extension PKTextField {
         return .default
     }
     
-    private func detectAutocapitalizationType(
+    private func determineAutocapitalizationType(
         autocapitalizationType: String
     ) -> UITextAutocapitalizationType {
         if autocapitalizationType == "sentences" {

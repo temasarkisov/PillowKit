@@ -1,7 +1,7 @@
 import UIKit
 
-final class PKViewBuilder {
-    func build(viewRules: PKViewRules) -> UIView? {
+final class PKViewBuilder: PKViewBuilderProtocol {
+    func build(viewRules: PKViewRules) -> PKView? {
         let view = build(viewType: viewRules.viewType)
         
         if let label = view as? PKLabel {
@@ -27,7 +27,7 @@ final class PKViewBuilder {
 }
 
 extension PKViewBuilder {
-    private func build(viewType: PKViewRules.ViewType) -> UIView? {
+    private func build(viewType: PKViewRules.ViewType) -> PKView? {
         switch viewType {
         case .label:
             return PKLabel()

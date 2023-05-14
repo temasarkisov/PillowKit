@@ -1,6 +1,6 @@
 import UIKit
 
-final class PKLabel: UIView {
+final class PKLabel: PKView {
     private let label: UILabel = UILabel()
     
     init() {
@@ -32,7 +32,7 @@ extension PKLabel {
 }
 
 extension PKLabel: PKViewProtocol {
-    func apply(visualProperties: [PKViewRules.VisualPropertyKey : String]) {
+    func apply(visualProperties: [PKViewRules.VisualPropertyKey: String]) {
         label.clipsToBounds = true
         
         label.backgroundColor = UIColor(hex: visualProperties[.backgroundColor] ?? "#a83232ff")
@@ -45,13 +45,13 @@ extension PKLabel: PKViewProtocol {
             name: visualProperties[.font] ?? "",
             size: CGFloat(Double(visualProperties[.fontSize] ?? "") ?? 11.0)
         )
-        label.textAlignment = detectTextAlignment(textAlignment: visualProperties[.textAlignment] ?? "")
+        label.textAlignment = determineTextAlignment(textAlignment: visualProperties[.textAlignment] ?? "")
         label.numberOfLines = 0  // Configure it in the future
     }
 }
  
 extension PKLabel {
-    private func detectTextAlignment(textAlignment: String) -> NSTextAlignment {
+    private func determineTextAlignment(textAlignment: String) -> NSTextAlignment {
         if textAlignment == "center" {
             return .center
         }

@@ -3,7 +3,7 @@ import UIKit
 struct PKViewRules {
     let id: String
     let viewType: ViewType
-    let layoutConfig: [LayoutConfigKey: String]
+    let layoutConfig: [AnchorName: [String: String]]
     let visualProperties: [VisualPropertyKey: String]
     let visualEffects: [VisualEffectKey: String]
 }
@@ -12,13 +12,26 @@ extension PKViewRules {
     init(_ responseEntity: PKViewRulesResponseEntity) {
         id = responseEntity.id
         viewType = ViewType(rawValue: responseEntity.viewType) ?? .unknown
-        layoutConfig = LayoutConfigKey.serialize(responseEntity.layoutConfig)
+        layoutConfig = AnchorName.serialize(responseEntity.layoutConfig)
         visualProperties = VisualPropertyKey.serialize(responseEntity.visualProperties)
         visualEffects = VisualEffectKey.serialize(responseEntity.visualEffects)
     }
 }
 
+//extension PKViewRules{
+//    typealias PKViewID = String
+//    typealias PKViewType = ViewType
+//    typealias PKLayoutConfig = [AnchorName: [String: String]]
+//    typealias PKVisualProperties = [VisualPropertyKey: String]
+//    typealias PKVisualEffects = [VisualEffectKey: String]
+//}
+
 extension PKViewRules {
+//    enum ViewID: String {
+//        case container = "container"
+//        case unknown
+//    }
+    
     enum ViewType: String {
         case label = "label"
         case image = "image"
@@ -27,20 +40,22 @@ extension PKViewRules {
         case unknown
     }
     
-    enum LayoutConfigKey: String {
+    enum AnchorName: String {
         case left = "left"
         case top = "top"
         case right = "right"
         case bottom = "bottom"
         case centerX = "centerX"
         case centerY = "centerY"
+        case width = "width"
+        case height = "height"
         case unknown
         
         fileprivate static func serialize(
-            _ layoutConfig: [String: String]
-        ) -> [LayoutConfigKey: String] {
+            _ layoutConfig: [String: [String: String]]
+        ) -> [AnchorName: [String: String]] {
             layoutConfig.reduce(into: [:]) { partialResult, layoutConfigItem in
-                partialResult[LayoutConfigKey(rawValue: layoutConfigItem.key) ?? .unknown] = layoutConfigItem.value
+                partialResult[AnchorName(rawValue: layoutConfigItem.key) ?? .unknown] = layoutConfigItem.value
             }
         }
     }
@@ -95,4 +110,8 @@ extension PKViewRules {
             }
         }
     }
+}
+
+extension PKViewRules {
+    
 }

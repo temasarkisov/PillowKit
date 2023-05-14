@@ -1,6 +1,6 @@
 import UIKit
 
-final class PKImageView: UIView {
+final class PKImageView: PKView {
     private let imageView: UIImageView = UIImageView()
     
     init() {
@@ -32,7 +32,7 @@ extension PKImageView {
 }
 
 extension PKImageView: PKViewProtocol {
-    func apply(visualProperties: [PKViewRules.VisualPropertyKey : String]) {
+    func apply(visualProperties: [PKViewRules.VisualPropertyKey: String]) {
         imageView.clipsToBounds = true
         
         imageView.layer.cornerRadius = CGFloat(Double(visualProperties[.cornerRadius] ?? "") ?? 0.0)

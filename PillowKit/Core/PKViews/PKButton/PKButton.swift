@@ -1,6 +1,6 @@
 import UIKit
 
-final class PKButton: UIView {
+final class PKButton: PKView {
     private let button: UIButton = UIButton()
     private var tapGestureRecognizer: UITapGestureRecognizer?
     
@@ -46,12 +46,12 @@ extension PKButton: PKViewProtocol {
             name: visualProperties[.font] ?? "",
             size: CGFloat(Double(visualProperties[.fontSize] ?? "") ?? 11.0)
         )
-        button.titleLabel?.textAlignment = detectTextAlignment(
+        button.titleLabel?.textAlignment = determineTextAlignment(
             textAlignment: visualProperties[.textAlignment] ?? ""
         )
         button.titleLabel?.numberOfLines = 0  // Configure it in the future
         
-        button.isUserInteractionEnabled = detectIsUserInteractionEnabled(
+        button.isUserInteractionEnabled = determineIsUserInteractionEnabled(
             isUserInteractionEnabled: visualProperties[.isUserInteractionEnabled] ?? ""
         )
     }
@@ -95,7 +95,7 @@ extension PKButton {
 }
     
 extension PKButton {
-    private func detectTextAlignment(textAlignment: String) -> NSTextAlignment {
+    private func determineTextAlignment(textAlignment: String) -> NSTextAlignment {
         if textAlignment == "center" {
             return .center
         }
@@ -108,7 +108,7 @@ extension PKButton {
         return .left
     }
     
-    private func detectIsUserInteractionEnabled(isUserInteractionEnabled: String) -> Bool {
+    private func determineIsUserInteractionEnabled(isUserInteractionEnabled: String) -> Bool {
         if isUserInteractionEnabled == "true" {
             return true
         }

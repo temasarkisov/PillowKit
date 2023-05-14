@@ -3,9 +3,9 @@ import UIKit
 class PKTextFieldWithPadding: UITextField {
     private let padding = UIEdgeInsets(
         top: 0,
-        left: 5,
+        left: 15,
         bottom: 0,
-        right: 5
+        right: 15
     )
 }
 
