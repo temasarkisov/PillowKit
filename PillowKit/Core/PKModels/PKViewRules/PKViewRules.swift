@@ -78,6 +78,7 @@ extension PKViewRules {
         
         case autocorrectionType = "autocorrection_type"
         case autocapitalizationType = "autocapitalization_type"
+        case isSecureTextEntry = "is_secure_text_entry"
         
         case isUserInteractionEnabled = "is_user_interaction_enabled"
         

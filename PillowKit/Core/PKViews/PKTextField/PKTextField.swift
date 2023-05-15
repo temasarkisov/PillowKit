@@ -53,6 +53,9 @@ extension PKTextField: PKViewProtocol {
         textField.autocapitalizationType = determineAutocapitalizationType(
             autocapitalizationType: visualProperties[.autocapitalizationType] ?? ""
         )
+        textField.isSecureTextEntry = determineIsSecureTextEntry(
+            isSecureTextEntry: visualProperties[.isSecureTextEntry] ?? ""
+        )
     }
 }
 
@@ -101,5 +104,14 @@ extension PKTextField {
             return .none
         }
         return .sentences
+    }
+    
+    private func determineIsSecureTextEntry(
+        isSecureTextEntry: String
+    ) -> Bool {
+        if isSecureTextEntry == "true" {
+            return true
+        }
+        return false
     }
 }

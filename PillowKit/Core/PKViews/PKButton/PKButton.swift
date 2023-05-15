@@ -46,6 +46,7 @@ extension PKButton: PKViewProtocol {
             name: visualProperties[.font] ?? "",
             size: CGFloat(Double(visualProperties[.fontSize] ?? "") ?? 11.0)
         )
+        button.titleLabel?.textColor = UIColor(hex: visualProperties[.textColor] ?? "#ffffffff")
         button.titleLabel?.textAlignment = determineTextAlignment(
             textAlignment: visualProperties[.textAlignment] ?? ""
         )

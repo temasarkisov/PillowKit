@@ -195,7 +195,7 @@
 			path = PillowKitUITests;
 			sourceTree = "<group>";
 		};
-		6E5B90482A0A95E2002D7DB3 /* Network */ = {
+		6E5B90482A0A95E2002D7DB3 /* PKNetwork */ = {
 			isa = PBXGroup;
 			children = (
 				6E5B905C2A0A9C00002D7DB3 /* HTTP */,
@@ -203,7 +203,7 @@
 				6E5B90642A0A9EFD002D7DB3 /* Endpoints */,
 				6E5B90672A0A9FC7002D7DB3 /* Secrets */,
 			);
-			path = Network;
+			path = PKNetwork;
 			sourceTree = "<group>";
 		};
 		6E5B904A2A0A9600002D7DB3 /* System */ = {
@@ -347,7 +347,7 @@
 				6E5B90882A0C1143002D7DB3 /* PKProvider */,
 				6E5B90752A0BE027002D7DB3 /* PKModels */,
 				6E5B90C62A11195E002D7DB3 /* PKTypes */,
-				6E5B90482A0A95E2002D7DB3 /* Network */,
+				6E5B90482A0A95E2002D7DB3 /* PKNetwork */,
 				6E5B908E2A0E4F06002D7DB3 /* Utils */,
 			);
 			path = Core;

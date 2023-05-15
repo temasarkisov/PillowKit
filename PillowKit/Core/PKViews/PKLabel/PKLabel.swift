@@ -45,6 +45,7 @@ extension PKLabel: PKViewProtocol {
             name: visualProperties[.font] ?? "",
             size: CGFloat(Double(visualProperties[.fontSize] ?? "") ?? 11.0)
         )
+        label.textColor = UIColor(hex: visualProperties[.textColor] ?? "#ffffffff")
         label.textAlignment = determineTextAlignment(textAlignment: visualProperties[.textAlignment] ?? "")
         label.numberOfLines = 0  // Configure it in the future
     }

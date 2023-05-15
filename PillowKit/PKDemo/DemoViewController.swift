@@ -14,7 +14,7 @@ class DemoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = .white
         delegate.didLoad()
     }
 }
@@ -36,10 +36,10 @@ extension DemoViewController: DemoPresenterDelegate {
                 equalTo: view.trailingAnchor
             ),
             container.topAnchor.constraint(
-                equalTo: view.safeAreaLayoutGuide.topAnchor
+                equalTo: view.topAnchor
             ),
             container.bottomAnchor.constraint(
-                equalTo: view.safeAreaLayoutGuide.bottomAnchor
+                equalTo: view.bottomAnchor
             ),
         ])
     }

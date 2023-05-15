@@ -1,6 +1,6 @@
 import UIKit
 
-final class PKViewWrapper {
+struct PKViewWrapper {
     let view: PKView
     let viewID: String
     let viewLayoutConfig: [PKViewRules.AnchorName: [String: String]]

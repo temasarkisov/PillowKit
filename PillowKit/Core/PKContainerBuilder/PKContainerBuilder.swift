@@ -47,24 +47,4 @@ extension PKContainerBuilder {
         }
         container.addViewWrapper(viewWrapper: viewWrapper)
     }
-    
-//    private func addView(viewRules: PKViewRules) {
-//        guard let viewWrapper = viewWrapperBuilder.build(
-//            viewRules: viewRules
-//        ) else {
-//            return
-//        }
-//
-//        viewWrapper.view.translatesAutoresizingMaskIntoConstraints = false
-//
-//        container.addSubview(viewWrapper.view)
-//        container.addViewsConstraints(
-//            [
-//                viewWrapper.view.leadingAnchor.constraint(equalTo: container.leadingAnchor),
-//                viewWrapper.view.trailingAnchor.constraint(equalTo: container.trailingAnchor),
-//                viewWrapper.view.topAnchor.constraint(equalTo: container.topAnchor),
-//                viewWrapper.view.bottomAnchor.constraint(equalTo: container.bottomAnchor),
-//            ]
-//        )
-//    }
 }
