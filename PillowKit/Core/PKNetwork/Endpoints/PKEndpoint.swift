@@ -1,12 +1,16 @@
 import Foundation
 
 
-enum PKEndpoint: String {
-    case viewsRules = "/update_views_rules"
+public struct PKEndpoint {
+    let url: String
+    
+    public init(url: String) {
+        self.url = url
+    }
 }
 
 extension PKEndpoint {
-    var absolutePath: String {
-        PKSecret.host + self.rawValue
+    public var absolutePath: String {
+        PKSecret.host + self.url
     }
 }

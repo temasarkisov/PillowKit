@@ -2,7 +2,7 @@ import UIKit
 
 final class PKButton: PKView {
     private let button: UIButton = UIButton()
-    private var tapGestureRecognizer: UITapGestureRecognizer?
+    private var tapAction: (() -> Void)?
     
     init() {
         super.init(frame: .zero)
@@ -32,6 +32,12 @@ extension PKButton {
     }
 }
 
+extension PKButton {
+    func setTapAction(tapAction: @escaping () -> Void) {
+        self.tapAction = tapAction
+    }
+}
+
 extension PKButton: PKViewProtocol {
     func apply(visualProperties: [PKViewRules.VisualPropertyKey : String]) {
         button.clipsToBounds = true
@@ -46,7 +52,7 @@ extension PKButton: PKViewProtocol {
             name: visualProperties[.font] ?? "",
             size: CGFloat(Double(visualProperties[.fontSize] ?? "") ?? 11.0)
         )
-        button.titleLabel?.textColor = UIColor(hex: visualProperties[.textColor] ?? "#ffffffff")
+        button.setTitleColor(UIColor(hex: visualProperties[.textColor] ?? "#000000ff"), for: .normal)
         button.titleLabel?.textAlignment = determineTextAlignment(
             textAlignment: visualProperties[.textAlignment] ?? ""
         )
@@ -58,21 +64,34 @@ extension PKButton: PKViewProtocol {
     }
     
     func apply(visualEffects: [PKViewRules.VisualEffectKey : String]) {
-        proceedTapEffect(tapEffect: visualEffects[.tapEffect] ?? "")
-        if let tapGestureRecognizer = tapGestureRecognizer {
-            button.addGestureRecognizer(tapGestureRecognizer)
+        guard let tapGestureRecognizer = proceedTapEffect(tapEffect: visualEffects[.tapEffect] ?? "") else {
+            return
         }
+        button.addGestureRecognizer(tapGestureRecognizer)
     }
 }
 
 extension PKButton {
-    private func proceedTapEffect(tapEffect: String) {
+    private func proceedTapEffect(tapEffect: String) -> UITapGestureRecognizer? {
+        if tapEffect.isEmpty {
+            return UITapGestureRecognizer(
+                target: self,
+                action: #selector(didTapWithNoEffect)
+            )
+        }
         if tapEffect == "pulse" {
-            tapGestureRecognizer = UITapGestureRecognizer(
+            return UITapGestureRecognizer(
                 target: self,
                 action: #selector(didTapWithPulseEffect)
             )
         }
+        
+        return nil
+    }
+    
+    @objc
+    private func didTapWithNoEffect() {
+        self.tapAction?()
     }
     
     @objc
@@ -81,13 +100,16 @@ extension PKButton {
             withDuration: 0.3,
             animations: { [weak self] in
                 guard let this = self else { return }
-                this.button.layer.cornerRadius = this.button.layer.cornerRadius + 10
+                this.button.layer.cornerRadius = this.button.layer.cornerRadius + 5
             },
             completion: { _ in
                 UIView.animate(
                     withDuration: 0.3,
                     animations: {
-                        self.button.layer.cornerRadius = self.button.layer.cornerRadius - 10
+                        self.button.layer.cornerRadius = self.button.layer.cornerRadius - 5
+                    },
+                    completion: { _ in
+                        self.tapAction?()
                     }
                 )
             }

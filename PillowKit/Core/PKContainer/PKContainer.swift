@@ -39,7 +39,7 @@ extension PKContainer {
     ) -> NSLayoutConstraint? {
         let viewIDEqualTo = anchorConfig["id"] ?? ""
 
-        guard let viewEqualTo = findView(by: viewIDEqualTo) else {
+        guard let viewEqualTo = obtainView(by: viewIDEqualTo) else {
             guard let constant = Double(anchorConfig["constant"] ?? "") else {
                 return nil
             }
@@ -132,15 +132,14 @@ extension PKContainer {
         }
     }
     
-    private func findView(by viewID: String) -> PKView? {
+    func obtainView(by viewID: String) -> PKView? {
         if viewID == "container" {
             return self
         }
-        
-        return findViewWrapper(by: viewID)?.view
+        return obtainViewWrapper(by: viewID)?.view
     }
     
-    private func findViewWrapper(by viewID: String) -> PKViewWrapper? {
+    private func obtainViewWrapper(by viewID: String) -> PKViewWrapper? {
         return viewWrappers.first(where: { viewWrapper in
             viewWrapper.viewID == viewID
         })

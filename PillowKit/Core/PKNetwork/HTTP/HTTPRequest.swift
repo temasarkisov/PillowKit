@@ -21,7 +21,6 @@ extension HTTPRequest {
 
 extension HTTPRequest where Response: Decodable {
     public func decode(_ data: Data) throws -> Response {
-        print(String(decoding: data, as: UTF8.self))
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         return try decoder.decode(

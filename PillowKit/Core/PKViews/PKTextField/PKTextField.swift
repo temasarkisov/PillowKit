@@ -35,6 +35,7 @@ extension PKTextField: PKViewProtocol {
     func apply(visualProperties: [PKViewRules.VisualPropertyKey: String]) {
         textField.clipsToBounds = true
         
+        textField.backgroundColor = UIColor(hex: visualProperties[.backgroundColor] ?? "#a83232ff")
         textField.layer.cornerRadius = CGFloat(Double(visualProperties[.cornerRadius] ?? "") ?? 0.0)
         textField.layer.borderColor = UIColor(hex: visualProperties[.borderColor] ?? "#000000ff")?.cgColor
         textField.layer.borderWidth = CGFloat(Double(visualProperties[.borderWidth] ?? "") ?? 0.0)

@@ -2,26 +2,29 @@ import UIKit
 
 private let logger: Logger = Logger()
 
-protocol DemoPresenterDelegate: AnyObject {
+protocol SignInPresenterDelegate: AnyObject {
     func updateContainer(_ container: PKContainer)
+    
+    func present(viewController: UIViewController)
 }
 
-final class DemoPresenter {
-    private let view: DemoPresenterDelegate
-    private let containerBuilder: PKContainerBuilder
+final class SignInPresenter {
+    private let view: SignInPresenterDelegate
+    private let handler: PKHandler
     
     init(
-        view: DemoPresenterDelegate,
-        containerBuilder: PKContainerBuilder
+        view: SignInPresenterDelegate,
+        handler: PKHandler
     ) {
         self.view = view
-        self.containerBuilder = containerBuilder
+        self.handler = handler
     }
 }
 
-extension DemoPresenter: DemoViewDelegate {
+extension SignInPresenter: SignInViewDelegate {
     func didLoad() {
-        containerBuilder.build(
+        handler.buildContainer(
+            endpoint: PKEndpoint(url: "/update_sign_in_views_data"),
             completion: { [weak self] result in
                 guard let this = self else { return }
                 
@@ -33,5 +36,9 @@ extension DemoPresenter: DemoViewDelegate {
                 }
             }
         )
+    }
+    
+    func didTapSignInButton() {
+        view.present(viewController: SignUpViewController())
     }
 }

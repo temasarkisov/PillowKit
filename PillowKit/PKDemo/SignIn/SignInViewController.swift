@@ -1,25 +1,26 @@
 import UIKit
 
-protocol DemoViewDelegate: AnyObject {
+protocol SignInViewDelegate: AnyObject {
     func didLoad()
+    
+    func didTapSignInButton()
 }
 
-class DemoViewController: UIViewController {
-    private lazy var delegate: DemoViewDelegate = DemoPresenter(
+class SignInViewController: UIViewController {
+    private lazy var delegate: SignInViewDelegate = SignInPresenter(
         view: self,
-        containerBuilder: PKContainerBuilder()
+        handler: PKHandler.shared
     )
     
     private var container: PKContainer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         delegate.didLoad()
     }
 }
 
-extension DemoViewController: DemoPresenterDelegate {
+extension SignInViewController: SignInPresenterDelegate {
     func updateContainer(_ container: PKContainer) {
         self.container?.removeFromSuperview()
         self.container = container
@@ -42,5 +43,19 @@ extension DemoViewController: DemoPresenterDelegate {
                 equalTo: view.bottomAnchor
             ),
         ])
+        
+        guard let signUpButton = container.obtainView(by: "sign_up_button") as? PKButton else {
+            return
+        }
+        signUpButton.setTapAction(tapAction: { [weak self] in
+            self?.delegate.didTapSignInButton()
+        })
+    }
+    
+    func present(viewController: UIViewController) {
+        navigationController?.pushViewController(
+            viewController,
+            animated: true
+        )
     }
 }

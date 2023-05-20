@@ -1,13 +1,5 @@
 import Foundation
 
-private let logger = Logger()
-
-public protocol PKMainAPI: AnyObject {
-    func viewsData(
-        completion: @escaping (Result<PKViewsDataResponseEntity, Error>) -> Void
-    )
-}
-
 public class DefaultPKMainAPI {
     let networkService: HTTPNetworkService
     
@@ -16,11 +8,12 @@ public class DefaultPKMainAPI {
     }
 }
 
-extension DefaultPKMainAPI: PKMainAPI {
+extension DefaultPKMainAPI: PKMainAPIProtocol {
     public func viewsData(
+        endpoint: PKEndpoint,
         completion: @escaping (Result<PKViewsDataResponseEntity, Error>) -> Void
     ) {
-        let request = ViewsRulesRequest()
+        let request = ViewsDataRequest(endpoint: endpoint)
         networkService.request(
             request,
             queue: .main

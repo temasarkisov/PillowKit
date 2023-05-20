@@ -1,15 +1,18 @@
 import Foundation
 
 
-public struct ViewsRulesRequest {
+public struct ViewsDataRequest {
     public typealias Response = PKViewsDataResponseEntity
+    private var endpoint: PKEndpoint
     
-    public init() {}
+    public init(endpoint: PKEndpoint) {
+        self.endpoint = endpoint
+    }
 }
 
-extension ViewsRulesRequest: HTTPRequest {
+extension ViewsDataRequest: HTTPRequest {
     public var url: String {
-        PKEndpoint.viewsRules.absolutePath
+        self.endpoint.absolutePath
     }
     
     public var method: HTTPMethod {

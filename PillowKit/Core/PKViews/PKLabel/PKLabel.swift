@@ -14,6 +14,16 @@ final class PKLabel: PKView {
 }
 
 extension PKLabel {
+    var text: String? {
+        get {
+            label.text
+        } set {
+            label.text = newValue
+        }
+    }
+}
+
+extension PKLabel {
     private func setupUI() {
         setupLabel()
     }

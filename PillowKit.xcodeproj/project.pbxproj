@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E2678E82A1663CE00ED02F3 /* PKHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2678E72A1663CE00ED02F3 /* PKHandler.swift */; };
+		6E2678EA2A1663E500ED02F3 /* PKHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2678E92A1663E500ED02F3 /* PKHandlerProtocol.swift */; };
+		6E2678EC2A191B6800ED02F3 /* PKMainAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2678EB2A191B6800ED02F3 /* PKMainAPIProtocol.swift */; };
+		6E2678EF2A191D4500ED02F3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2678EE2A191D4500ED02F3 /* SignUpViewController.swift */; };
+		6E2678F12A191D5100ED02F3 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2678F02A191D5100ED02F3 /* SignUpPresenter.swift */; };
 		6E5B90172A0A952D002D7DB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B90162A0A952D002D7DB3 /* AppDelegate.swift */; };
 		6E5B90192A0A952D002D7DB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B90182A0A952D002D7DB3 /* SceneDelegate.swift */; };
-		6E5B901B2A0A952D002D7DB3 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B901A2A0A952D002D7DB3 /* DemoViewController.swift */; };
+		6E5B901B2A0A952D002D7DB3 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B901A2A0A952D002D7DB3 /* SignInViewController.swift */; };
 		6E5B90202A0A952F002D7DB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E5B901F2A0A952F002D7DB3 /* Assets.xcassets */; };
 		6E5B90232A0A952F002D7DB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E5B90212A0A952F002D7DB3 /* LaunchScreen.storyboard */; };
 		6E5B902E2A0A9530002D7DB3 /* PillowKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B902D2A0A9530002D7DB3 /* PillowKitTests.swift */; };
@@ -27,7 +32,7 @@
 		6E5B90662A0A9F43002D7DB3 /* PKEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B90652A0A9F43002D7DB3 /* PKEndpoint.swift */; };
 		6E5B90692A0A9FEA002D7DB3 /* PKSecret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B90682A0A9FEA002D7DB3 /* PKSecret.swift */; };
 		6E5B906C2A0AA126002D7DB3 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B906B2A0AA126002D7DB3 /* Logger.swift */; };
-		6E5B90702A0BC110002D7DB3 /* DemoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B906F2A0BC110002D7DB3 /* DemoPresenter.swift */; };
+		6E5B90702A0BC110002D7DB3 /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B906F2A0BC110002D7DB3 /* SignInPresenter.swift */; };
 		6E5B90792A0BFD5A002D7DB3 /* PKViewsDataResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B90782A0BFD5A002D7DB3 /* PKViewsDataResponseEntity.swift */; };
 		6E5B907C2A0BFF9B002D7DB3 /* PKViewRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B907B2A0BFF9B002D7DB3 /* PKViewRules.swift */; };
 		6E5B90832A0BFFFC002D7DB3 /* PKViewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B90822A0BFFFC002D7DB3 /* PKViewsData.swift */; };
@@ -40,7 +45,7 @@
 		6E5B90A02A0E54E1002D7DB3 /* PKImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B909F2A0E54E1002D7DB3 /* PKImageView.swift */; };
 		6E5B90A22A0E551B002D7DB3 /* PKTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B90A12A0E551B002D7DB3 /* PKTextField.swift */; };
 		6E5B90A42A0E5543002D7DB3 /* PKButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B90A32A0E5543002D7DB3 /* PKButton.swift */; };
-		6E5B90A92A0E936D002D7DB3 /* DemoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B90A82A0E936D002D7DB3 /* DemoCoordinator.swift */; };
+		6E5B90A92A0E936D002D7DB3 /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B90A82A0E936D002D7DB3 /* SignInCoordinator.swift */; };
 		6E5B90B02A0FDEF0002D7DB3 /* PKViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B90AF2A0FDEF0002D7DB3 /* PKViewProtocol.swift */; };
 		6E5B90B32A0FE57E002D7DB3 /* UIFontsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B90B22A0FE57E002D7DB3 /* UIFontsExtensions.swift */; };
 		6E5B90B52A0FE640002D7DB3 /* ALSSirius.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E5B90B42A0FE640002D7DB3 /* ALSSirius.ttf */; };
@@ -72,10 +77,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E2678E72A1663CE00ED02F3 /* PKHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKHandler.swift; sourceTree = "<group>"; };
+		6E2678E92A1663E500ED02F3 /* PKHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKHandlerProtocol.swift; sourceTree = "<group>"; };
+		6E2678EB2A191B6800ED02F3 /* PKMainAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKMainAPIProtocol.swift; sourceTree = "<group>"; };
+		6E2678EE2A191D4500ED02F3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		6E2678F02A191D5100ED02F3 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		6E5B90132A0A952D002D7DB3 /* PillowKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PillowKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E5B90162A0A952D002D7DB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E5B90182A0A952D002D7DB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6E5B901A2A0A952D002D7DB3 /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
+		6E5B901A2A0A952D002D7DB3 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		6E5B901F2A0A952F002D7DB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E5B90222A0A952F002D7DB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E5B90242A0A952F002D7DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,7 +106,7 @@
 		6E5B90652A0A9F43002D7DB3 /* PKEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKEndpoint.swift; sourceTree = "<group>"; };
 		6E5B90682A0A9FEA002D7DB3 /* PKSecret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKSecret.swift; sourceTree = "<group>"; };
 		6E5B906B2A0AA126002D7DB3 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		6E5B906F2A0BC110002D7DB3 /* DemoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoPresenter.swift; sourceTree = "<group>"; };
+		6E5B906F2A0BC110002D7DB3 /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
 		6E5B90782A0BFD5A002D7DB3 /* PKViewsDataResponseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKViewsDataResponseEntity.swift; sourceTree = "<group>"; };
 		6E5B907B2A0BFF9B002D7DB3 /* PKViewRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKViewRules.swift; sourceTree = "<group>"; };
 		6E5B90822A0BFFFC002D7DB3 /* PKViewsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKViewsData.swift; sourceTree = "<group>"; };
@@ -109,7 +119,7 @@
 		6E5B909F2A0E54E1002D7DB3 /* PKImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKImageView.swift; sourceTree = "<group>"; };
 		6E5B90A12A0E551B002D7DB3 /* PKTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKTextField.swift; sourceTree = "<group>"; };
 		6E5B90A32A0E5543002D7DB3 /* PKButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKButton.swift; sourceTree = "<group>"; };
-		6E5B90A82A0E936D002D7DB3 /* DemoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoCoordinator.swift; sourceTree = "<group>"; };
+		6E5B90A82A0E936D002D7DB3 /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
 		6E5B90AF2A0FDEF0002D7DB3 /* PKViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKViewProtocol.swift; sourceTree = "<group>"; };
 		6E5B90B22A0FE57E002D7DB3 /* UIFontsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontsExtensions.swift; sourceTree = "<group>"; };
 		6E5B90B42A0FE640002D7DB3 /* ALSSirius.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ALSSirius.ttf; sourceTree = "<group>"; };
@@ -148,6 +158,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E2678E62A16639E00ED02F3 /* PKHandler */ = {
+			isa = PBXGroup;
+			children = (
+				6E2678E72A1663CE00ED02F3 /* PKHandler.swift */,
+				6E2678E92A1663E500ED02F3 /* PKHandlerProtocol.swift */,
+			);
+			path = PKHandler;
+			sourceTree = "<group>";
+		};
+		6E2678ED2A191D1C00ED02F3 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				6E2678EE2A191D4500ED02F3 /* SignUpViewController.swift */,
+				6E2678F02A191D5100ED02F3 /* SignUpPresenter.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		6E5B900A2A0A952D002D7DB3 = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +250,7 @@
 			children = (
 				6E5B905E2A0A9C36002D7DB3 /* PKMainAPI */,
 				6E5B905A2A0A9B0C002D7DB3 /* PKMainAPI.swift */,
+				6E2678EB2A191B6800ED02F3 /* PKMainAPIProtocol.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -292,10 +321,8 @@
 		6E5B906E2A0BC069002D7DB3 /* PKDemo */ = {
 			isa = PBXGroup;
 			children = (
-				6E5B90AA2A0E9559002D7DB3 /* Demo */,
-				6E5B901A2A0A952D002D7DB3 /* DemoViewController.swift */,
-				6E5B906F2A0BC110002D7DB3 /* DemoPresenter.swift */,
-				6E5B90A82A0E936D002D7DB3 /* DemoCoordinator.swift */,
+				6E2678ED2A191D1C00ED02F3 /* SignUp */,
+				6E5B90AA2A0E9559002D7DB3 /* SignIn */,
 				6E5B904A2A0A9600002D7DB3 /* System */,
 			);
 			path = PKDemo;
@@ -338,12 +365,13 @@
 		6E5B90852A0C107F002D7DB3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				6E5B90922A0E52E0002D7DB3 /* PKViews */,
-				6E5B908B2A0C13B1002D7DB3 /* PKViewBuilder */,
-				6E5B90BA2A1014C2002D7DB3 /* PKViewWrapper */,
-				6E5B90BD2A102C55002D7DB3 /* PKViewWrapperBuilder */,
+				6E2678E62A16639E00ED02F3 /* PKHandler */,
 				6E5B90992A0E53E8002D7DB3 /* PKContainer */,
 				6E5B90842A0C106B002D7DB3 /* PKContainerBuilder */,
+				6E5B90BA2A1014C2002D7DB3 /* PKViewWrapper */,
+				6E5B90BD2A102C55002D7DB3 /* PKViewWrapperBuilder */,
+				6E5B90922A0E52E0002D7DB3 /* PKViews */,
+				6E5B908B2A0C13B1002D7DB3 /* PKViewBuilder */,
 				6E5B90882A0C1143002D7DB3 /* PKProvider */,
 				6E5B90752A0BE027002D7DB3 /* PKModels */,
 				6E5B90C62A11195E002D7DB3 /* PKTypes */,
@@ -442,11 +470,14 @@
 			path = PKButton;
 			sourceTree = "<group>";
 		};
-		6E5B90AA2A0E9559002D7DB3 /* Demo */ = {
+		6E5B90AA2A0E9559002D7DB3 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
+				6E5B901A2A0A952D002D7DB3 /* SignInViewController.swift */,
+				6E5B906F2A0BC110002D7DB3 /* SignInPresenter.swift */,
+				6E5B90A82A0E936D002D7DB3 /* SignInCoordinator.swift */,
 			);
-			path = Demo;
+			path = SignIn;
 			sourceTree = "<group>";
 		};
 		6E5B90B12A0FE570002D7DB3 /* Fonts */ = {
@@ -617,13 +648,16 @@
 				6E5B90B92A100765002D7DB3 /* PKTextFieldWithPadding.swift in Sources */,
 				6E5B90562A0A9955002D7DB3 /* HTTPQueryParams.swift in Sources */,
 				6E5B907C2A0BFF9B002D7DB3 /* PKViewRules.swift in Sources */,
+				6E2678E82A1663CE00ED02F3 /* PKHandler.swift in Sources */,
+				6E2678EF2A191D4500ED02F3 /* SignUpViewController.swift in Sources */,
 				6E5B909B2A0E5427002D7DB3 /* PKContainer.swift in Sources */,
 				6E5B90C32A102CF8002D7DB3 /* PKViewBuilderProtocol.swift in Sources */,
-				6E5B901B2A0A952D002D7DB3 /* DemoViewController.swift in Sources */,
+				6E5B901B2A0A952D002D7DB3 /* SignInViewController.swift in Sources */,
 				6E5B90C12A102CB4002D7DB3 /* PKViewWrapperBuilderProtocol.swift in Sources */,
 				6E5B90872A0C109B002D7DB3 /* PKContainerBuilder.swift in Sources */,
 				6E5B904C2A0A9849002D7DB3 /* HTTPRequest.swift in Sources */,
-				6E5B90A92A0E936D002D7DB3 /* DemoCoordinator.swift in Sources */,
+				6E2678EA2A1663E500ED02F3 /* PKHandlerProtocol.swift in Sources */,
+				6E5B90A92A0E936D002D7DB3 /* SignInCoordinator.swift in Sources */,
 				6E5B90B02A0FDEF0002D7DB3 /* PKViewProtocol.swift in Sources */,
 				6E5B90522A0A98E2002D7DB3 /* HTTPMethod.swift in Sources */,
 				6E5B90692A0A9FEA002D7DB3 /* PKSecret.swift in Sources */,
@@ -638,8 +672,9 @@
 				6E5B90832A0BFFFC002D7DB3 /* PKViewsData.swift in Sources */,
 				6E5B908D2A0C1411002D7DB3 /* PKViewBuilder.swift in Sources */,
 				6E5B909D2A0E5456002D7DB3 /* PKLabel.swift in Sources */,
-				6E5B90702A0BC110002D7DB3 /* DemoPresenter.swift in Sources */,
+				6E5B90702A0BC110002D7DB3 /* SignInPresenter.swift in Sources */,
 				6E5B90C52A102D77002D7DB3 /* PKContainerBuilderProtocol.swift in Sources */,
+				6E2678EC2A191B6800ED02F3 /* PKMainAPIProtocol.swift in Sources */,
 				6E5B90192A0A952D002D7DB3 /* SceneDelegate.swift in Sources */,
 				6E5B905B2A0A9B0C002D7DB3 /* PKMainAPI.swift in Sources */,
 				6E5B90B32A0FE57E002D7DB3 /* UIFontsExtensions.swift in Sources */,
@@ -652,6 +687,7 @@
 				6E5B904E2A0A9887002D7DB3 /* HTTPBody.swift in Sources */,
 				6E5B90662A0A9F43002D7DB3 /* PKEndpoint.swift in Sources */,
 				6E5B90792A0BFD5A002D7DB3 /* PKViewsDataResponseEntity.swift in Sources */,
+				6E2678F12A191D5100ED02F3 /* SignUpPresenter.swift in Sources */,
 				6E5B90BC2A102B79002D7DB3 /* PKViewWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

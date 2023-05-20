@@ -1,6 +1,6 @@
 //import UIKit
 //
-//final class DemoCoordinator {
+//final class SignInCoordinator {
 //    private let navigationController: UINavigationController
 //    
 //    init(navigationController: UINavigationController) {
@@ -8,9 +8,9 @@
 //    }
 //    
 //    func start() {
-//        let view = DemoViewController()
+//        let view = SignInViewController()
 //        let containerBuilder = PKContainerBuilder()
-//        let presenter = DemoPresenter(
+//        let presenter = SignInPresenter(
 //            view: view,
 //            containerBuilder: containerBuilder
 //        )
