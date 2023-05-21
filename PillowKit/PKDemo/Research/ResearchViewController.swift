@@ -1,13 +1,11 @@
 import UIKit
 
-protocol SignUpViewDelegate: AnyObject {
+protocol ResearchViewDelegate: AnyObject {
     func didLoad()
-    
-    func didTapContinueButton()
 }
 
-class SignUpViewController: UIViewController {
-    private lazy var delegate: SignUpViewDelegate = SignUpPresenter(
+class ResearchViewController: UIViewController {
+    private lazy var delegate: ResearchViewDelegate = ResearchPresenter(
         view: self,
         handler: PKHandler.shared
     )
@@ -20,7 +18,7 @@ class SignUpViewController: UIViewController {
     }
 }
 
-extension SignUpViewController: SignUpPresenterDelegate {
+extension ResearchViewController: ResearchPresenterDelegate {
     func updateContainer(_ container: PKContainer) {
         self.container?.removeFromSuperview()
         self.container = container
@@ -43,16 +41,5 @@ extension SignUpViewController: SignUpPresenterDelegate {
                 equalTo: view.bottomAnchor
             ),
         ])
-        
-        guard let continueButton = container.obtainView(by: "continue_button") as? PKButton else {
-            return
-        }
-        continueButton.setTapAction(tapAction: { [weak self] in
-            self?.delegate.didTapContinueButton()
-        })
-    }
-    
-    func present(viewController: UIViewController) {
-        navigationController?.popViewController(animated: true)
     }
 }

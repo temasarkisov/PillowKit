@@ -2,18 +2,16 @@ import UIKit
 
 private let logger: Logger = Logger()
 
-protocol SignUpPresenterDelegate: AnyObject {
+protocol ResearchPresenterDelegate: AnyObject {
     func updateContainer(_ container: PKContainer)
-    
-    func present(viewController: UIViewController)
 }
 
-final class SignUpPresenter {
-    private let view: SignUpPresenterDelegate
+final class ResearchPresenter {
+    private let view: ResearchPresenterDelegate
     private let handler: PKHandler
     
     init(
-        view: SignUpPresenterDelegate,
+        view: ResearchPresenterDelegate,
         handler: PKHandler
     ) {
         self.view = view
@@ -21,13 +19,14 @@ final class SignUpPresenter {
     }
 }
 
-extension SignUpPresenter: SignUpViewDelegate {
+extension ResearchPresenter: ResearchViewDelegate {
     func didLoad() {
         handler.buildContainer(
-            endpoint: PKEndpoint(url: "/update_sign_up_views_data"),
+            endpoint: PKEndpoint(url: "/update_research_views_data"),
             completion: { [weak self] result in
-                guard let this = self else { return }
-                
+                guard let this = self else {
+                    return
+                }
                 switch result {
                 case .success(let container):
                     this.view.updateContainer(container)
@@ -36,9 +35,5 @@ extension SignUpPresenter: SignUpViewDelegate {
                 }
             }
         )
-    }
-    
-    func didTapContinueButton() {
-        view.present(viewController: SignInViewController())
     }
 }

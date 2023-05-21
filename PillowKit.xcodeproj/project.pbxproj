@@ -12,6 +12,8 @@
 		6E2678EC2A191B6800ED02F3 /* PKMainAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2678EB2A191B6800ED02F3 /* PKMainAPIProtocol.swift */; };
 		6E2678EF2A191D4500ED02F3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2678EE2A191D4500ED02F3 /* SignUpViewController.swift */; };
 		6E2678F12A191D5100ED02F3 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2678F02A191D5100ED02F3 /* SignUpPresenter.swift */; };
+		6E2678F42A1AAB3800ED02F3 /* ResearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2678F32A1AAB3800ED02F3 /* ResearchViewController.swift */; };
+		6E2678F62A1AAB4A00ED02F3 /* ResearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2678F52A1AAB4A00ED02F3 /* ResearchPresenter.swift */; };
 		6E5B90172A0A952D002D7DB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B90162A0A952D002D7DB3 /* AppDelegate.swift */; };
 		6E5B90192A0A952D002D7DB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B90182A0A952D002D7DB3 /* SceneDelegate.swift */; };
 		6E5B901B2A0A952D002D7DB3 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B901A2A0A952D002D7DB3 /* SignInViewController.swift */; };
@@ -82,6 +84,8 @@
 		6E2678EB2A191B6800ED02F3 /* PKMainAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKMainAPIProtocol.swift; sourceTree = "<group>"; };
 		6E2678EE2A191D4500ED02F3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		6E2678F02A191D5100ED02F3 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
+		6E2678F32A1AAB3800ED02F3 /* ResearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchViewController.swift; sourceTree = "<group>"; };
+		6E2678F52A1AAB4A00ED02F3 /* ResearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchPresenter.swift; sourceTree = "<group>"; };
 		6E5B90132A0A952D002D7DB3 /* PillowKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PillowKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E5B90162A0A952D002D7DB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E5B90182A0A952D002D7DB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +178,15 @@
 				6E2678F02A191D5100ED02F3 /* SignUpPresenter.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		6E2678F22A1AAB1C00ED02F3 /* Research */ = {
+			isa = PBXGroup;
+			children = (
+				6E2678F32A1AAB3800ED02F3 /* ResearchViewController.swift */,
+				6E2678F52A1AAB4A00ED02F3 /* ResearchPresenter.swift */,
+			);
+			path = Research;
 			sourceTree = "<group>";
 		};
 		6E5B900A2A0A952D002D7DB3 = {
@@ -321,6 +334,7 @@
 		6E5B906E2A0BC069002D7DB3 /* PKDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6E2678F22A1AAB1C00ED02F3 /* Research */,
 				6E2678ED2A191D1C00ED02F3 /* SignUp */,
 				6E5B90AA2A0E9559002D7DB3 /* SignIn */,
 				6E5B904A2A0A9600002D7DB3 /* System */,
@@ -652,6 +666,7 @@
 				6E2678EF2A191D4500ED02F3 /* SignUpViewController.swift in Sources */,
 				6E5B909B2A0E5427002D7DB3 /* PKContainer.swift in Sources */,
 				6E5B90C32A102CF8002D7DB3 /* PKViewBuilderProtocol.swift in Sources */,
+				6E2678F62A1AAB4A00ED02F3 /* ResearchPresenter.swift in Sources */,
 				6E5B901B2A0A952D002D7DB3 /* SignInViewController.swift in Sources */,
 				6E5B90C12A102CB4002D7DB3 /* PKViewWrapperBuilderProtocol.swift in Sources */,
 				6E5B90872A0C109B002D7DB3 /* PKContainerBuilder.swift in Sources */,
@@ -679,6 +694,7 @@
 				6E5B905B2A0A9B0C002D7DB3 /* PKMainAPI.swift in Sources */,
 				6E5B90B32A0FE57E002D7DB3 /* UIFontsExtensions.swift in Sources */,
 				6E5B906C2A0AA126002D7DB3 /* Logger.swift in Sources */,
+				6E2678F42A1AAB3800ED02F3 /* ResearchViewController.swift in Sources */,
 				6E5B90BF2A102C77002D7DB3 /* PKViewWrapperBuilder.swift in Sources */,
 				6E5B90502A0A98BD002D7DB3 /* HTTPError.swift in Sources */,
 				6E5B90A02A0E54E1002D7DB3 /* PKImageView.swift in Sources */,
