@@ -35,7 +35,7 @@ extension PKHandler {
                     this.container = this.containerBuilder.build(viewsData: viewsData)
                     let end = NSDate()  // Code for research
                     let timeInterval: Double = end.timeIntervalSince(start as Date)  // Code for research
-                    print("Elapsed time = \(timeInterval)") // Code for research
+                    print("Elapsed time to build container = \(timeInterval)") // Code for research
                     completion(.success(this.container))
                 case .failure(let error):
                     completion(.failure(error))
