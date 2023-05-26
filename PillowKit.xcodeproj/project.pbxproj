@@ -189,6 +189,16 @@
 			path = Research;
 			sourceTree = "<group>";
 		};
+		6E4BB5AB2A210C7B0005A1DE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6E5B90902A0E4F31002D7DB3 /* UIColorExtensions.swift */,
+				6E5B90B22A0FE57E002D7DB3 /* UIFontsExtensions.swift */,
+				6E5B90B62A0FF769002D7DB3 /* UIImageViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		6E5B900A2A0A952D002D7DB3 = {
 			isa = PBXGroup;
 			children = (
@@ -415,20 +425,11 @@
 		6E5B908E2A0E4F06002D7DB3 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				6E5B90B12A0FE570002D7DB3 /* Fonts */,
-				6E5B908F2A0E4F21002D7DB3 /* Colors */,
 				6E5B906A2A0AA103002D7DB3 /* Logger */,
-				6E5B90B62A0FF769002D7DB3 /* UIImageViewExtension.swift */,
+				6E4BB5AB2A210C7B0005A1DE /* Extensions */,
+				6E5B90B12A0FE570002D7DB3 /* Fonts */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		6E5B908F2A0E4F21002D7DB3 /* Colors */ = {
-			isa = PBXGroup;
-			children = (
-				6E5B90902A0E4F31002D7DB3 /* UIColorExtensions.swift */,
-			);
-			path = Colors;
 			sourceTree = "<group>";
 		};
 		6E5B90922A0E52E0002D7DB3 /* PKViews */ = {
@@ -497,7 +498,6 @@
 		6E5B90B12A0FE570002D7DB3 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				6E5B90B22A0FE57E002D7DB3 /* UIFontsExtensions.swift */,
 				6E5B90B42A0FE640002D7DB3 /* ALSSirius.ttf */,
 			);
 			path = Fonts;
