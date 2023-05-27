@@ -14,8 +14,14 @@ class SignUpViewController: UIViewController {
     
     private var container: PKContainer?
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        hideKeyboardWhenTappedAround()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         delegate.didLoad()
     }
 }
