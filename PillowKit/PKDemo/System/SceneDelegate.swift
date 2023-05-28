@@ -13,6 +13,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let viewController = SignInViewController()
         let navigationController = UINavigationController(rootViewController: viewController)
+//        navigationController.navigationItem.hidesBackButton = true
+        navigationController.setNavigationBarHidden(true, animated: false)
         
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()

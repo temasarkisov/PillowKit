@@ -48,7 +48,6 @@
 		6E5B90A02A0E54E1002D7DB3 /* PKImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B909F2A0E54E1002D7DB3 /* PKImageView.swift */; };
 		6E5B90A22A0E551B002D7DB3 /* PKTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B90A12A0E551B002D7DB3 /* PKTextField.swift */; };
 		6E5B90A42A0E5543002D7DB3 /* PKButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B90A32A0E5543002D7DB3 /* PKButton.swift */; };
-		6E5B90A92A0E936D002D7DB3 /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B90A82A0E936D002D7DB3 /* SignInCoordinator.swift */; };
 		6E5B90B02A0FDEF0002D7DB3 /* PKViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B90AF2A0FDEF0002D7DB3 /* PKViewProtocol.swift */; };
 		6E5B90B32A0FE57E002D7DB3 /* UIFontsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B90B22A0FE57E002D7DB3 /* UIFontsExtensions.swift */; };
 		6E5B90B52A0FE640002D7DB3 /* ALSSirius.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E5B90B42A0FE640002D7DB3 /* ALSSirius.ttf */; };
@@ -133,7 +132,6 @@
 		6E5B909F2A0E54E1002D7DB3 /* PKImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKImageView.swift; sourceTree = "<group>"; };
 		6E5B90A12A0E551B002D7DB3 /* PKTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKTextField.swift; sourceTree = "<group>"; };
 		6E5B90A32A0E5543002D7DB3 /* PKButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKButton.swift; sourceTree = "<group>"; };
-		6E5B90A82A0E936D002D7DB3 /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
 		6E5B90AF2A0FDEF0002D7DB3 /* PKViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKViewProtocol.swift; sourceTree = "<group>"; };
 		6E5B90B22A0FE57E002D7DB3 /* UIFontsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontsExtensions.swift; sourceTree = "<group>"; };
 		6E5B90B42A0FE640002D7DB3 /* ALSSirius.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ALSSirius.ttf; sourceTree = "<group>"; };
@@ -189,7 +187,6 @@
 				A91677EAC6DBCCFD8FBA90B4 /* Pods-PillowKitTests.debug.xcconfig */,
 				49859F25AF67D6D1DDE68B62 /* Pods-PillowKitTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -524,7 +521,6 @@
 			children = (
 				6E5B901A2A0A952D002D7DB3 /* SignInViewController.swift */,
 				6E5B906F2A0BC110002D7DB3 /* SignInPresenter.swift */,
-				6E5B90A82A0E936D002D7DB3 /* SignInCoordinator.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -824,7 +820,6 @@
 				6E5B90872A0C109B002D7DB3 /* PKContainerBuilder.swift in Sources */,
 				6E5B904C2A0A9849002D7DB3 /* HTTPRequest.swift in Sources */,
 				6E2678EA2A1663E500ED02F3 /* PKHandlerProtocol.swift in Sources */,
-				6E5B90A92A0E936D002D7DB3 /* SignInCoordinator.swift in Sources */,
 				6E5B90B02A0FDEF0002D7DB3 /* PKViewProtocol.swift in Sources */,
 				6E5B90522A0A98E2002D7DB3 /* HTTPMethod.swift in Sources */,
 				6E5B90692A0A9FEA002D7DB3 /* PKSecret.swift in Sources */,

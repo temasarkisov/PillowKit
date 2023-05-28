@@ -24,7 +24,8 @@ final class SignInPresenter {
 extension SignInPresenter: SignInViewDelegate {
     func didLoad() {
         handler.buildContainer(
-            endpoint: PKEndpoint(url: "/update_sign_in_views_data"),
+            endpoint: PKEndpoint(url: "/update/views/data"),
+            viewsDataName: "sign_in_views_data",
             completion: { [weak self] result in
                 guard let this = self else { return }
                 

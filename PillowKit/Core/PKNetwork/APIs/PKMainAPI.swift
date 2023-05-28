@@ -11,9 +11,13 @@ public class DefaultPKMainAPI {
 extension DefaultPKMainAPI: PKMainAPIProtocol {
     public func viewsData(
         endpoint: PKEndpoint,
+        viewsDataName: String,
         completion: @escaping (Result<PKViewsDataResponseEntity, Error>) -> Void
     ) {
-        let request = ViewsDataRequest(endpoint: endpoint)
+        let request = ViewsDataRequest(
+            endpoint: endpoint,
+            viewsDataName: viewsDataName
+        )
         networkService.request(
             request,
             queue: .main

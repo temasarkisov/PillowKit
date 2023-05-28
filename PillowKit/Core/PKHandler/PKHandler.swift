@@ -21,10 +21,12 @@ final class PKHandler: PKHandlerProtocol {
 extension PKHandler {
     func buildContainer(
         endpoint: PKEndpoint,
+        viewsDataName: String,
         completion: @escaping(Result<PKContainer, Error>) -> Void
     ) {
         provider.fetchViewsData(
             endpoint: endpoint,
+            viewsDataName: viewsDataName,
             completion: { [weak self] result in
                 guard let this = self else {
                     return

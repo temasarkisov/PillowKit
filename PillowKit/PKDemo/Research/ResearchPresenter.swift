@@ -22,7 +22,8 @@ final class ResearchPresenter {
 extension ResearchPresenter: ResearchViewDelegate {
     func didLoad() {
         handler.buildContainer(
-            endpoint: PKEndpoint(url: "/update_research_views_data"),
+            endpoint: PKEndpoint(url: "/update/views/data"),
+            viewsDataName: "",
             completion: { [weak self] result in
                 guard let this = self else {
                     return
